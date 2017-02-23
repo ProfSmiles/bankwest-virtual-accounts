@@ -17,6 +17,12 @@ table#_ctl0_ContentMain_grdBalances tr td.value span.va_real_balance
 {
     font-size: 14px;
     margin-top: 10px;
+    font-weight: bold;
+}
+
+table#_ctl0_ContentMain_grdBalances tr td.value span.va_real_balance.va_negative
+{
+    color: red;
 }
 
 div.va_accounts_list

@@ -132,11 +132,15 @@ function updateBalances() {
         f_bal = '('+formatCur(accounts[account_list[i].id].balance)+')';
         if (parent.find('.va_real_balance').length) {
             parent.find('.va_real_balance').text(f_bal);
+            parent.find('.va_real_balance').removeClass('va_negative');
         }
         else {
             parent.append(
                 '<span class="va_real_balance">'+f_bal+'</span>'
             );
+        }
+        if (accounts[account_list[i].id].balance < 0) {
+            parent.find('.va_real_balance').addClass('va_negative');
         }
     }
 }
